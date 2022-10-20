@@ -1,0 +1,8 @@
+**/.vscode
+**/Listings
+**/Objects
+*.Ahmad
+*.uvopt
+*.scvd
+*.uvproj
+*.py
