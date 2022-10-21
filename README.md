@@ -10,4 +10,8 @@ The RGB LED on the evalutaion board cycles through different combinations of RGB
 A seven segment display is controlled using the evaluation board. It counts from 0 to 9 and then restarts.
 
 3. [7 Segment Adder and Register](https://github.com/M-Ahmad45/tivaprojects/tree/main/7segment%20controller%20with%20adder%20register)  
-The MCU has been programmed to emulate two registers along with and adder subtractor. Different operations are performed using control signals.
+The MCU has been programmed to emulate two registers along with and adder subtractor. Different operations are performed using control signals.  
+
+## Acknowledgements
+
+I would like to thank [Hamza Akhtar](https://github.com/HamxaCodes) for lending me his Tiva evaluation board.
