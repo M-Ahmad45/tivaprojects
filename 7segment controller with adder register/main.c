@@ -92,37 +92,41 @@ void display_number(void){
 
 void control(void){
     input_op = (PA_DATA_R>>5) & 0x7; //shift bits 7:5 to 2:0 and select only those bits
-    switch (input_op)
-    {
-    case 0: //display regA
-        format_number(regA, screen_buffer);
-        break;
-    case 1: //display reg B
-        format_number(regB, screen_buffer);
-        break;
-    case 2: //display A+B
-        format_number(regA+regB,screen_buffer);
-        break;
-    case 3: //display A-B
-        format_number(regA-regB, screen_buffer);
-        break;
-    
-    case 4: //store value into regA
-        regA = PB_DATA_R;
-        break;
-    
-    case 5: //store value into regB
-        regB = PB_DATA_R;
-        break;
-    
-    case 6: //store A+b into regA
-        if(last_op!=6)  regA = regA+regB; //condition to prevent unintentional repeated additions
-        break;
-    case 7: //store A-B into regA
-        if(last_op!=7) regA = regA-regB;
-        break;
+
+    if(input_op!=last_op){ //avoid repeatedly executing the same operation
+        switch (input_op)
+        {
+        case 0: //display regA
+            format_number(regA, screen_buffer);
+            break;
+        case 1: //display reg B
+            format_number(regB, screen_buffer);
+            break;
+        case 2: //display A+B
+            format_number(regA+regB,screen_buffer);
+            break;
+        case 3: //display A-B
+            format_number(regA-regB, screen_buffer);
+            break;
+        
+        case 4: //store value into regA
+            regA = PB_DATA_R;
+            break;
+        
+        case 5: //store value into regB
+            regB = PB_DATA_R;
+            break;
+        
+        case 6: //store A+b into regA
+            regA = regA+regB; 
+            break;
+        case 7: //store A-B into regA
+            regA = regA-regB;
+            break;
+        }
+
+        last_op = input_op;
     }
-    last_op = input_op;
 }
 
 void format_number(unsigned int b, byte buffer[3]){
