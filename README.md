@@ -12,6 +12,9 @@ A seven segment display is controlled using the evaluation board. It counts from
 3. [7 Segment Adder and Register](https://github.com/M-Ahmad45/tivaprojects/tree/main/7segment%20controller%20with%20adder%20register)  
 The MCU has been programmed to emulate two registers along with an adder and subtractor. Different operations are performed using control signals.  
 
+## StartUp file  
+The `startup_TM4C123.s` must be added to the project. It is has been placed out of the individual project folders as it is the same across all projects.
+
 ## Acknowledgements
 
 I would like to thank [Hamza Akhtar](https://github.com/HamxaCodes) for lending me his Tiva evaluation board.
