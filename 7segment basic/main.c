@@ -20,7 +20,6 @@ void SystemInit(void){}
 
 void delay(int d);
 
-void display_num(int num);
 
 int main(){
     int x;
@@ -43,10 +42,4 @@ int main(){
 
 void delay(int d){
     for(int i=0;i<d;i++){}
-}
-
-void display_num(int num){
-    //display number on 7seg. ic chip on pcb will decode we have to only provide bcd to it
-    // only 0 to 9 is supported by the display
-    GPIO_PD_DATA = num;
 }
