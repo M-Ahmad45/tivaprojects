@@ -7,9 +7,6 @@ There is an RGB LED present on the Tiva TM4C123G board connected to pins 1 2 3 a
 |  2  |  Blue |
 |  3  | Green |  
 
-## Startup Assembly File
-The startup assembly file is provided by keil mircro vision IDE. It sets up the processor for usage.  
-
 ## main.c
 
 `GET_PTR` is a macro function which provides a convinient way to get pointer references to the desired registers. Simply pass in the address and a its deferenced version is returned.
