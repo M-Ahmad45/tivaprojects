@@ -102,11 +102,11 @@ void control(void){
         case 1: //display reg B
             format_number(regB, screen_buffer);
             break;
-        case 2: //display A+B
-            format_number(regA+regB,screen_buffer);
+        case 2: //move A to B
+            regB = regA;
             break;
-        case 3: //display A-B
-            format_number(regA-regB, screen_buffer);
+        case 3: //bitwise and for A , B
+            regA = regA & regB;
             break;
         
         case 4: //store value into regA
