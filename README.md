@@ -10,7 +10,10 @@ The RGB LED on the evalutaion board cycles through different combinations of RGB
 A seven segment display is controlled using the evaluation board. It counts from 0 to 9 and then restarts.
 
 3. [7 Segment Adder and Register](https://github.com/M-Ahmad45/tivaprojects/tree/main/7segment%20controller%20with%20adder%20register)  
-The MCU has been programmed to emulate two registers along with an adder and subtractor. Different operations are performed using control signals.  
+The MCU has been programmed to emulate two registers along with an adder and subtractor. Different operations are performed using control signals. 
+
+4. [7 Segment Counter with Interrupt](https://github.com/M-Ahmad45/tivaprojects/tree/main/7segment%20counter%20with%20interrupt)  
+A seven segment display counts from 0 to 9 and back to 0, and repeats this cycle indefinitely. Switch 1 on the evaluation board is used as an interrupt source. When the switch is pressed the ISR cycles through different RGB LED combinations before returning to the counter.
 
 ## StartUp file  
 The `startup_TM4C123.s` must be added to the project. It is has been placed out of the individual project folders as it is the same across all projects.
